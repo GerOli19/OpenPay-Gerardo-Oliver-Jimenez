@@ -55,7 +55,7 @@ public class SearchCharacterServiceImpl implements SearchCharacterService {
      *                       Este objeto puede contener los datos de los personajes o información de error, dependiendo de la respuesta de la API.
      * @return Una cadena de texto que representa el resultado del procesamiento de la respuesta de la API.
      *         Esta cadena puede contener los datos de los personajes en un formato específico, o un mensaje de error si la respuesta de la API indicó un error.
-     * @author MBL
+     * @author Gerardo Oliver Jimenez
      */
     private String processResponseApi(ResponseEntity<Object> responseMarvel){
 
@@ -109,7 +109,7 @@ public class SearchCharacterServiceImpl implements SearchCharacterService {
      * @return Un JSONObject que contiene los datos de los personajes.
      *         Cada clave en este JSONObject es un atributo de los personajes,
      *         y el valor asociado es el valor de ese atributo para los personajes en arrayResultados.
-     * @author MBL
+     * @author Gerardo Oliver Jimenez
      */
     private JSONObject setDataCharacters(JSONArray arrayResultados) {
 
@@ -188,7 +188,7 @@ public class SearchCharacterServiceImpl implements SearchCharacterService {
 
             if(characterId != null) {
 
-                bitacoraEntity.setPath(SearchCharactersConstants.DESCRIPTION_PATH_TWO);
+                bitacoraEntity.setPath(SearchCharactersConstants.DESCRIPTION_PATH_TWO+"{"+characterId+"}");
 
             }else {
 

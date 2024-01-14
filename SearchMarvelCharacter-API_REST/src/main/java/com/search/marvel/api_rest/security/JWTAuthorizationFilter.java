@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author MBL
+ * @author Gerardo Oliver Jimenez
  */
 
 public class JWTAuthorizationFilter extends OncePerRequestFilter {

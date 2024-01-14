@@ -1,7 +1,7 @@
 package com.search.marvel.api_rest.security;
 
 /**
- * @author MBL
+ * @author Gerardo Oliver Jimenez
  */
 
 public interface JwtUtil {

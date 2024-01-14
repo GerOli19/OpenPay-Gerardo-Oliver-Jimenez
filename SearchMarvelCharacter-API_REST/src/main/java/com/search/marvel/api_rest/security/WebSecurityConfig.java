@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 
 /**
- * @author MBL
+ * @author Gerardo Oliver Jimenez
  */
 
 @EnableWebSecurity

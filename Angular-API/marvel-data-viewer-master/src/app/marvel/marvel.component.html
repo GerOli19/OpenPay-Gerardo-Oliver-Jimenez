@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OpenPay - Test: Gerardo Oliver "MARVEL API"</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 m-2" *ngFor="let image of images">
+      <div class="card">
+        <img [src]="image.path + '.' + image.extension" class="card-img-top img-size" [alt]="image.name">
+        <div class="card-body">
+          <a class="card-title" (click)="showDescription(image.id)">{{ image.name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ titleCharacter }}</h5>
+      </div>
+      <div class="modal-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ descriptionCharacter }}</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-outline-primary" onclick="$('#descriptionModal').modal('hide');">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
