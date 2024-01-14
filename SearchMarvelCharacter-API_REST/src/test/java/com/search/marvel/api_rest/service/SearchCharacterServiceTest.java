@@ -15,13 +15,10 @@ class SearchCharacterServiceTest {
     void getAllCharacters() {
 
         int characterId = 0;
-        // Crear la instancia del servicio con el cliente simulado
         SearchCharacterService marvelService = new SearchCharacterServiceImpl();
 
-        // Llamar al método del servicio que utiliza el cliente simulado
         String characterName = marvelService.getCharacters(characterId);
 
-        // Verificar que el resultado es el esperado
         assertNotNull(characterName);
 
     }
@@ -34,13 +31,11 @@ class SearchCharacterServiceTest {
          * Id: 1011334
          * Charcter: 3-D Man
          * */
-        // Crear la instancia del servicio con el cliente simulado
+
         SearchCharacterService marvelService = new SearchCharacterServiceImpl();
 
-        // Llamar al método del servicio que utiliza el cliente simulado
         String characterName = marvelService.getCharacters(characterId);
 
-        // Verificar que el resultado es el esperado
         assertNotNull(characterName);
 
     }
@@ -48,13 +43,10 @@ class SearchCharacterServiceTest {
     @Test
     void getDataBitacora() {
 
-        // Crear la instancia del servicio con el cliente simulado
         SearchCharacterService marvelService = new SearchCharacterServiceImpl();
 
-        // Llamar al método del servicio que utiliza el cliente simulado
         List<BitacoraAccesoMarvelEntity> datosBitacora = marvelService.getDataBitacora();
 
-        // Verificar que el resultado es el esperado
         assertNotNull(datosBitacora);
 
     }
